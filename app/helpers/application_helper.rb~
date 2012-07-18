@@ -1,0 +1,35 @@
+module ApplicationHelper
+
+  # Returns the full title on a per-page basis.
+  def full_title(page_title)
+    base_title = "Ruby on Rails Tutorial Sample App"
+    if page_title.empty?
+      base_title
+    else
+      "#{base_title} | #{page_title}"
+    end
+  end
+end
+
+#app/views/layouts/application.html.erb
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title(yield(:title)) %></title> #!
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
