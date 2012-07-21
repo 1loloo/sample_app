@@ -21,7 +21,8 @@ group :test do
   gem 'capybara', '1.1.2'
   gem 'rb-inotify', '0.8.8'
   gem 'libnotify', '0.5.9'
-end
+  gem 'factory_girl_rails', '1.4.0'
+ end
 group :production do
   gem 'pg', '0.12.2'
 end
